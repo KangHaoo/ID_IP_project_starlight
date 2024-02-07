@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/style_sakura.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d63193a5c9.js" crossorigin="anonymous"></script>
+    <script src="script_lottie.js" defer></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <title>One Product</title>
+</head>
+
+<body>
+    <div class="lottieanimation">
+        <dotlottie-player src="https://lottie.host/41820afa-d580-45b9-ba73-728685cdb4e8/yeqZKQwxLJ.json" id="loadingAnimation" background="transparent" loop autoplay>
+        </dotlottie-player>
+    </div>
+    <!--add arrow-->
+    <div class="desktop-profile-container">
+        <div class="top-container"> 
+            <a href="/products.html"><img src="/public/external/backbutton.svg" class="backbutton" /></a>
+
+            
+        </div>
+
+    <div class="slideshow-container">
+        <div class="slides">
+            <img class="slide" src="/images/sakura image.webp" alt="Image 1">
+            <div class="slide">
+             <iframe title="candleFinalTurntable" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/19788e1664d2496a94ce43881d3ff8e8/embed" style="    width: 100%;
+             height: 600px;"> </iframe>
+            </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    </div>
+    <div class="product-info-container">
+        <div style="display: flex; flex-direction: column; justify-content: flex-start;">
+            <div class="product-info">
+                <div class="product-header">
+                    <h2>Sakura candles</h2>
+                    <a href ="cart.html">
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product-fav-btn">
+                    <h2>$35</h2>
+                    <i class="fa-regular fa-star fa-large" style="color: #4d423a;"></i>
+                </div>
+                <p style="display: flex; justify-content: space-between;">Description: <span id="product-desc"></p>
+                <p style="display:flex; justify-content: space-between;">Sakura candles</p>
+                <p style="display:flex; justify-content: space-between;">Scent: Floral scents</p>
+                <p style="display:flex; justify-content: space-between;">Size: 6cm * 6cm</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

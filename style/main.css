@@ -1,0 +1,579 @@
+body {
+    background-color: #FFF7F8;
+    color: #4D423A;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f8f8;
+}
+
+.navbar .logo img {
+    width: 200px;
+    height: auto;
+}
+
+.navbar .icon {
+    color: black;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Arima', Arial, sans-serif;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+
+
+
+/* Search Bar */
+.searchbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 95vw;
+    /* Make the search bar take up the full width of its parent */
+}
+
+.searchbar input {
+    padding: 15px;
+    border-radius: 0px 22.5px 22.5px 0px;
+    min-width: 200px;
+    width: 25%;
+    /* Make the input field take up 80% of the search bar's width */
+    border: none;
+}
+
+.searchbar i {
+    padding: 15px;
+}
+
+.searchbar .fa-search {
+    left: 10px;
+    background-color: white;
+    border-radius: 22.5px 0px 0px 22.5px;
+}
+
+.searchbar .options {
+    right: 10px;
+}
+
+/* Banner  */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    width: calc(85vw - 60px);
+    height: calc(40vw - 60px);
+    position: relative;
+    text-decoration: none;
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.banner span {
+    position: relative;
+    z-index: 2;
+    font-size: calc(2vw + 1vh + .5vmin);
+    font-family: 'Arima Madurai';
+    font-weight: bold;
+    color: #4D423A;
+}
+
+/* Grid Home */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    width: calc(35vw - 60px);
+    height: calc(35vw - 60px);
+    position: relative;
+    text-decoration: none;
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.grid-item span {
+    position: relative;
+    z-index: 2;
+    font-size: calc(2vw + 1vh + .5vmin);
+    font-family: 'Arima', Arial, sans-serif;
+    font-weight: bold;
+    color: #4D423A;
+}
+
+@media (max-width: 430px) {
+    .navbar .logo img {
+        width: 100px;
+    }
+}
+
+/* Products */
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    position: relative;
+    flex-basis: calc(30% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid #3c3c3c;
+}
+
+.add-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #1d1d1d;
+    /* Change the color as needed */
+}
+
+.product-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.product-name,
+.product-cost {
+    margin-left: 10px;
+}
+
+/* For 2 columns on smaller screens */
+@media (max-width: 768px) {
+    .product {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+/* For 1 column on even smaller screens */
+@media (max-width: 420px) {
+    .product {
+        flex-basis: calc(100% - 10px);
+    }
+}
+
+/* Login / Register */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logo-container img {
+    max-width: 170px;
+    width: calc(20% + 20% + 0.5vmin);
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    /* adjust this to control the width */
+    margin: 0 auto;
+    /* centers the container horizontally */
+    padding: 20px;
+}
+
+/* CSS styles for input container */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    margin: 20px;
+}
+
+.styled-input {
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    font-size: 18px;
+    text-indent: 10px;
+    /* Increase the size of the input */
+    width: 100%;
+    /* Shorten the width of the input */
+    font-family: 'Arima Madurai', cursive;
+    /* Change the font to Arima Madurai */
+
+}
+
+.styled-input:focus {
+    outline: none;
+}
+
+.input-container .input-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.input-container input {
+    /* padding: 10px; */
+    border: none;
+}
+
+/* CSS styles for forgot password link */
+.forgot-password {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.forgot-password a {
+    color: #999;
+    text-decoration: none;
+}
+
+/* CSS styles for sign in button */
+.sign-in-button {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.sign-in-button button {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #FFD6D8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Arima Madurai', cursive;
+    padding: 20px;
+    color: #4D423A;
+    font-size: medium;
+}
+
+/* CSS styles for register link */
+.register-link {
+    text-align: center;
+}
+
+.register-link a {
+    color: #4D423A;
+    text-decoration: none;
+}
+
+/* Product Page */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    background-color: #787878;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 50vh;
+    display: none;
+    object-fit: contain;
+}
+
+.carousel-image:first-child {
+    display: block;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot-holder {
+    background-color: #ADADAD;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    margin: 0 2px;
+    background-color: #cdcdcd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
+
+.product-info-new {
+    position: relative;
+    top: -40px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5vw;
+}
+
+.product-details-new {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-name-new {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-cost-new {
+    color: green;
+}
+
+.product-description-new {
+    color: grey;
+}
+
+.add-to-cart-new {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cart-button-new {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 40px;
+}
+
+/* Cart Page */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 25px;
+}
+
+.flex-item {
+    flex: 3;
+}
+
+.item-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+    padding: 30px;
+    background-color: #FFE6E9;
+    border-radius: 25px;
+}
+
+.item-section img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.item-section h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.item-section p {
+    margin: 0;
+    color: #666;
+}
+
+.item-section button {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.total-section {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #FFE6E9;
+}
+
+.total-section p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.total-section hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.total-section button {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .mobile-bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #ffffff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .Home {
+        max-width: 100%; /* Set the maximum width to ensure responsiveness */
+        height: auto; /* Maintain the aspect ratio while resizing */
+        max-height: 50px; /* Set a maximum height if needed */
+    }
+    .products {
+        max-width: 100%; /* Set the maximum width to ensure responsiveness */
+        height: auto; /* Maintain the aspect ratio while resizing */
+        max-height: 50px; /* Set a maximum height if needed */
+    }
+    .favourite {
+        max-width: 100%; /* Set the maximum width to ensure responsiveness */
+        height: auto; /* Maintain the aspect ratio while resizing */
+        max-height: 50px; /* Set a maximum height if needed */
+    }
+    .reward {
+        max-width: 100%; /* Set the maximum width to ensure responsiveness */
+        height: auto; /* Maintain the aspect ratio while resizing */
+        max-height: 50px; /* Set a maximum height if needed */
+    }
+
+    .mobile-bottom-nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .mobile-bottom-nav {
+        display: none;
+    }
+}
+
+
+
+#loadingAnimation { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: #FFF7F8;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1000; 
+} 
+ 
+#loadingAnimation dotlottie-player { 
+    width: 300px; 
+    height: 300px;
+}
+
+    

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
+    <script src="script_lottie.js" defer></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <style>
+        .reward-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 30vw;
+        }
+
+        .points {
+            font-size: 38px;
+            margin-bottom: 20px;
+            font-family: 'Urbanist', sans-serif;
+            font-weight: bold;
+        }
+
+        .left-aligned {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #DF37D6;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: visible;
+        }
+
+        .inner-bar {
+            width: 40%;
+            height: 100%;
+            background-color: #FEC0FF;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .spaced-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #DF37D6;
+            opacity: .71;
+            border-radius: 50%;
+            margin: 0px 5px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #FF86E0;
+            opacity: 0.71;
+            border-radius: 50%;
+            position: relative;
+            left: 94%;
+            top: -170%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .s-50 {
+            font-size: 20px;
+            color: black;
+            font-family: 'Urbanist', sans-serif;
+            font-weight: bold;
+        }
+
+        .milestone {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 1rem;
+            box-shadow: inset rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
+        }
+
+        .milestone-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .tick-box {
+            width: 45px;
+            height: 45px;
+            margin: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .point-count {
+            font-family: 'Urbanist', sans-serif;
+            font-size: 20px;
+            color: #5C5252;
+            margin-left: 5px;
+        }
+
+        .stamps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 30px;
+            width: 90%;
+            padding: 30px;
+            margin: 10px;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+            background-image: linear-gradient(#FFBCBC, rgba(255, 194, 194, 0.29));
+        }
+
+        .stamp {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stamp-text {
+            margin-top: 2px;
+            font-family: 'Arima Madurai', sans-serif;
+            font-size: 7px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+
+
+    <div class="reward-container">
+        <div class="centered-container">
+            <span class="points">26 points</span>
+            <div class="left-aligned"><span>claim free points</span></div>
+            <div class="progress-bar">
+                <div class="inner-bar">
+                    <div class="spaced-dot"></div>
+                    <div class="spaced-dot"></div>
+                </div>
+                <div class="circle">
+                    <span class="s-50">50</span>
+                </div>
+            </div>
+            <div class="left-aligned"><span>Milestone</span></div>
+            <div class="milestone">
+                <div class="milestone-row">
+                    <div class="tick-box" style="background-color: #FEC0FF;">
+                        <img src="images/tick.png" alt="">
+                    </div>
+                    <div class="point-count">5 points</div>
+                </div>
+                <div class="milestone-row">
+                    <div class="tick-box" style="background-color: #FEA3FF;">
+                        <img src="images/tick.png" alt="">
+                    </div>
+                    <div class="point-count">20 points</div>
+                </div>
+                <div class="milestone-row">
+                    <div class="tick-box" style="background-color: #FF86E0;">
+                        <!-- <img src="images/tick.png" alt=""> -->
+                    </div>
+                    <div class="point-count">50 points</div>
+                </div>
+            </div>
+            <div class="left-aligned"><span>Your collected stamps</span></div>
+            <div class="stamps">
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.50;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.50;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.50;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.50;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.50;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.50;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.50;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 1;" src="images/unlocked-stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+                <div class="stamp">
+                    <img style="background-color: #C4C4C4; opacity: 0.;" src="images/stamp.png" alt="Stamp">
+                    <span class="stamp-text">0 stamps</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+</body>
+
+</html>

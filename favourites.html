@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
+    <script src="script_lottie.js" defer></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    
+</head>
+
+<body>
+    <div class="lottieanimation">
+        <dotlottie-player src="https://lottie.host/41820afa-d580-45b9-ba73-728685cdb4e8/yeqZKQwxLJ.json" id="loadingAnimation" background="transparent" loop autoplay>
+        </dotlottie-player>
+    </div>
+
+  
+
+    <div id="navbar"></div>
+ 
+    </div>
+    <div id="searchbar"></div>
+    <div class="product-grid">
+        <div class="product"> 
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+            <a href="teddybear.html">
+                <div class="product-image" style="background-image: url('/images/teddybear-duck.jpg');"></div>
+            </a>
+            <h2 class="product-name">Teddy Bear</h2>
+            <p class="product-cost">$35</p>
+        </div>
+        <div class="product">
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+            <div class="product-image" style="background-image: url('/images/cactus.jpg');"></div>
+            <h2 class="product-name">Cactus</h2>
+            <p class="product-cost">$30</p>
+        </div>
+        <div class="product">
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+            <a href="blackcat.html">
+                <div class="product-image" style="background-image: url('/images/black\ cat.jpeg');"></div>
+            </a>
+            <h2 class="product-name">Red/black cat</h2>
+            <p class="product-cost">$ 35</p>
+        </div>
+        <div class="product">
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+            <a href="sakura.html">
+                <div class="product-image" style="background-image: url('/images/sakura\ image.webp');"></div>
+            </a>
+            <h2 class="product-name">Sakura</h2>
+            <p class="product-cost">$35</p>
+        </div>
+        <div class="product">
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+            <div class="product-image" style="background-image: url('images/fox.jpeg');"></div>
+            <h2 class="product-name">Fox</h2>
+            <p class="product-cost">$25</p>
+        </div>
+        <div class="product">
+            <button class="add-button"><i class="fas fa-plus"></i></button>
+            <div class="product-image" style="background-image: url('/images/ligher\ candle.jpeg');"></div>
+            <h2 class="product-name">Lighter candles</h2>
+            <p class="product-cost">$20</p>
+        </div>
+
+    <div class="mobile-bottom-nav">
+        <a href="/index.html"><img src="/images/Home.png" class="Home"/> </a>
+        <a href="/products.html"><img src="/public/external/profilepic.png" class="products"/></a> 
+        <a href="/favourites.html"><img src="/images/favourite.png" class="favourite"/> </a>
+        <a href="/reward.html"><img src="/images/reward.png" class="reward"/> </a>
+        </div>
+    </div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <script>
+        fetch('searchbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('searchbar').innerHTML = data);
+    </script>
+     <script src="script_lottie.js" defer></script>
+</body>
+
+</html>

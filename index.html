@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
+    <script src="script_lottie.js" defer></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    
+
+   
+</head>
+
+<body> 
+    <div class="lottieanimation">
+        <dotlottie-player src="https://lottie.host/41820afa-d580-45b9-ba73-728685cdb4e8/yeqZKQwxLJ.json" id="loadingAnimation" background="transparent" loop autoplay>
+        </dotlottie-player>
+    </div>
+
+    <div id="navbar"></div>
+    
+    
+    <div id="searchbar"></div>
+    <div class="container">
+        <a href="releases.html" class="banner">
+            <img src="images/release.png" alt="Image 1">
+            <span>NEW RELEASE</span>
+        </a>
+    </div>
+
+    <div class="grid">
+        <a href="bestsellers.html" class="grid-item">
+            <img src="images/bestseller.png" alt="Image 1">
+            <span>Best Sellers</span>
+        </a>
+        <a href="scents.html" class="grid-item">
+            <img src="images/scents.png" alt="Image 2">
+            <span>Scents</span>
+        </a>
+        <a href="animals.html" class="grid-item">
+            <img src="images/candleGang.png" alt="Image 3">
+            <span>Animals</span>
+        </a>
+        <a href="floral.html" class="grid-item">
+            <img src="images/floral.png" alt="Image 4">
+            <span>Floral</span>
+        </a>
+    </div>
+ 
+    
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <script>
+        fetch('searchbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('searchbar').innerHTML = data);
+    </script>
+
+
+</body>
+
+</html>

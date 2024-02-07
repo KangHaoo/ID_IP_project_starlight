@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
+    <script src="script_lottie.js" defer></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+
+<body>
+    <div class="lottieanimation">
+        <dotlottie-player src="https://lottie.host/41820afa-d580-45b9-ba73-728685cdb4e8/yeqZKQwxLJ.json" id="loadingAnimation" background="transparent" loop autoplay>
+        </dotlottie-player>
+    </div>
+
+    <div id="navbar"></div>
+
+    <h1 style="margin-left: 95px;">MY CART</h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            <!-- Single Item -->
+            <div class="item-section">
+                <img src="/images/sakura image.webp" alt="Item">
+                <div
+                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
+                    <div>
+                        <h2>Sakura candles</h2>
+                        <p>Cost:<span id="item-cost">$35</span></p>
+                    </div>
+                    <div>
+                        <button>-</button>
+                        <span id="item-quantity">1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: flex-start;">
+            <div class="total-section">
+                <h2>Amount</h2>
+                <p style="display: flex; justify-content: space-between;">Total Cost (with Tax): <span id="total-cost">$35</span>
+                </p>
+                <p style="display: flex; justify-content: space-between;">Delivery Cost: <span id="delivery-cost">$6</span></p>
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <p>Voucher:</p>
+                    <button onclick="window.location.href='voucher-page.html'">Use</button>
+                </div>
+                <hr>
+                <p style="display: flex; justify-content: space-between;">Total: <span id=" final-total">$35</span>
+                </p>
+
+
+            </div>
+            <a href="/cart/Checkout.html" style="text-decoration: none; color: inherit;">
+                <div class="total-section" style="align-items: center;">CHECKOUT</div>
+                </div>
+
+        
+                <div class="mobile-bottom-nav">
+                    <a href="/index.html"><img src="/images/Home.png" class="Home"/> </a>
+                    <a href="/products.html"><img src="/public/external/profilepic.png" class="products"/></a> 
+                    <a href="/favourites.html"><img src="/images/favourite.png" class="favourite"/> </a>
+                    <a href="/reward.html"><img src="/images/reward.png" class="reward"/> </a>
+                </div>
+               
+
+
+    </div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+</body>
+
+</html>

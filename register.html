@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="logo-container">
+        <img src="images/detailedlogo.png" alt="Logo">
+    </div>
+
+    <div class="centered-container">
+        <div class="input-container">
+            <i class="far fa-envelope"></i>
+            <input class="styled-input" type="text" placeholder="Full Name">
+        </div>
+        
+        <div class="input-container">
+            <i class="far fa-envelope"></i>
+            <input class="styled-input" id="signup-email" type="email" placeholder="Email Address">
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-lock"></i>
+            <input class="styled-input" id="signup-password" type="password" placeholder="Password">
+            <i id="toggle-password-visibility" class="fas fa-eye"></i>
+        </div>
+
+        <div class="sign-in-button">
+            
+            <button type="submit" id="Register">Register</button> 
+        </div>
+
+        <div class="register-link">
+            <p>Already Registered? <a href="/login.html">Sign In</a></p>
+        </div>
+
+    </div>
+
+
+    <script>
+         document.getElementById('toggle-password-visibility').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password-input');
+            var passwordIcon = document.getElementById('toggle-password-visibility');
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordIcon.classList.remove('fa-eye');
+                passwordIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = "password";
+                passwordIcon.classList.remove('fa-eye-slash');
+                passwordIcon.classList.add('fa-eye');
+            }
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

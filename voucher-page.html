@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/79cdab9c68.js" crossorigin="anonymous"></script>
+    <style>
+        .voucher-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .voucher {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+ 
+
+    <h1 style="margin-left: 95px;">MY CART</h1>
+
+    <div class="voucher-container">
+        <div class="voucher">
+            <div style="display: flex; align-items: center;">
+                <input type="radio" name="voucherSelection"
+                    style="margin-right: 10px; width: 20px; height: 20px; background-color: pink;">
+                <img src="images/voucher.png" alt="voucher1" style="width: 100%;">
+            </div>
+        </div>
+        <div class="voucher">
+            <div style="display: flex; align-items: center;">
+                <input type="radio" name="voucherSelection"
+                    style="margin-right: 10px; width: 20px; height: 20px; background-color: pink;">
+                <img src="images/voucher.png" alt="voucher1" style="width: 100%;">
+            </div>
+        </div>
+        <div class="voucher">
+            <div style="display: flex; align-items: center;">
+                <input type="radio" name="voucherSelection"
+                    style="margin-right: 10px; width: 20px; height: 20px; background-color: pink;">
+                <img src="images/voucher.png" alt="voucher1" style="width: 100%;">
+            </div>
+        </div>
+
+        <a href="cart.html">
+            <button
+                style="margin: 10px; padding: 10px 20px; background-color: #FFE6E9; border: none; border-radius: 5px; font-family: 'Arima Madurai', cursive; font-size: 20px; width: 200px;">APPLY</button>
+        </a>
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('navbar').innerHTML = data);
+        </script>
+</body>
+
+</html>
